@@ -1,11 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://bp44auxwnxhrw"]
+[gd_scene load_steps=5 format=3 uid="uid://bp44auxwnxhrw"]
 
 [ext_resource type="Script" path="res://scenes/main.gd" id="1_mgspf"]
 [ext_resource type="PackedScene" uid="uid://d1jv1brtnqvxu" path="res://scenes/player.tscn" id="1_y7og1"]
 [ext_resource type="Script" path="res://scenes/ui.gd" id="2_4qha0"]
+[ext_resource type="PackedScene" uid="uid://c0nipx0yli60u" path="res://scenes/background.tscn" id="4_a2b7e"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_mgspf")
+
+[node name="Background" parent="." instance=ExtResource("4_a2b7e")]
+scale = Vector2(9.92, 3.08)
 
 [node name="UI" type="CanvasLayer" parent="."]
 script = ExtResource("2_4qha0")

@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://c0nipx0yli60u"]
+
+[ext_resource type="Script" path="res://scenes/background.gd" id="1_h0ucq"]
+[ext_resource type="Texture2D" uid="uid://bf347cndn6ce5" path="res://art/square.png" id="2_v4k28"]
+
+[node name="Background" type="Node2D"]
+script = ExtResource("1_h0ucq")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.176471)
+scale = Vector2(3.85938, 6.89175)
+texture = ExtResource("2_v4k28")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 100000.0
+autostart = true

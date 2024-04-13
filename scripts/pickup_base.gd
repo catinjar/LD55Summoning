@@ -4,7 +4,12 @@ extends Area2D
 
 enum ObstacleType
 {
-	CIRCLE_RAIN = 0,
+	CIRCLE_RAIN = 0, # Balls dropping from above
+	SQUARES = 1, # Just moving squares
+	BOUNCING_TRIANGLES = 2, # Keeps bounding inside screen
+	BOUNCING_BALL = 3, # Ball falls with gravity and bounces
+	ROTATING_SQUARES = 4,
+	SCALING_BALLS = 5, # Balls that are scaling and moving in random directions
 }
 
 @export var obstacle_type : ObstacleType
