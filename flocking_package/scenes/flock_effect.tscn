@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://c21sq33gmkjr"]
+
+[ext_resource type="Script" path="res://flocking_package/scripts/flock_effect.gd" id="1_prjuv"]
+
+[node name="FlockEffect" type="Node"]
+script = ExtResource("1_prjuv")
+resolution = Vector2(12, 12)

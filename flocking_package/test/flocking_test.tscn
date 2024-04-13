@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://bxgl6d8qd42kv"]
+
+[ext_resource type="Texture2D" uid="uid://brkcxp3nxgn72" path="res://flocking_package/art/circle.png" id="1_ydsx7"]
+[ext_resource type="PackedScene" uid="uid://c21sq33gmkjr" path="res://flocking_package/scenes/flock_effect.tscn" id="2_bktv5"]
+
+[node name="FlockingTest" type="Node"]
+
+[node name="FlockEffectExample" type="Node" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="FlockEffectExample"]
+position = Vector2(632, 529)
+scale = Vector2(5, 5)
+texture = ExtResource("1_ydsx7")
+
+[node name="Sprite2D2" type="Sprite2D" parent="FlockEffectExample"]
+position = Vector2(473, 615)
+scale = Vector2(5, 5)
+texture = ExtResource("1_ydsx7")
+
+[node name="FlockEffect" parent="FlockEffectExample" instance=ExtResource("2_bktv5")]
+resolution = Vector2(1, 1)
