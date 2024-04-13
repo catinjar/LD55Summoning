@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" path="res://scenes/game_core.gd" id="1_gc4bm"]
 [ext_resource type="PackedScene" uid="uid://b5largg8owtqm" path="res://scenes/circle_rain.tscn" id="2_2v15i"]
-[ext_resource type="PackedScene" uid="uid://h0bohwcsagiy" path="res://scenes/pickup_base.tscn" id="3_vkfyg"]
+[ext_resource type="PackedScene" uid="uid://b38p5tkrygs1g" path="res://scenes/pickups/circle_rain_pickup.tscn" id="3_jjggu"]
 
 [node name="GameCore" type="Node2D"]
 script = ExtResource("1_gc4bm")
 circle_rain_scene = ExtResource("2_2v15i")
-pickup_scenes = Array[PackedScene]([ExtResource("3_vkfyg")])
+pickup_scenes = Array[PackedScene]([ExtResource("3_jjggu")])

@@ -6,27 +6,42 @@ extends Node2D
 var obstacles = []
 var current_pickups = []
 
-func add_obstacle(obstacle_type : PickupBase.ObstacleType):
-	obstacles.push_back(obstacle_type)
+var score = 0
+var high_score = 0
+
+func add_obstacle(pickup):
+	obstacles.push_back(pickup.obstacle_type)
 	
-	if obstacle_type == PickupBase.ObstacleType.CIRCLE_RAIN:
-		var circle_rain = circle_rain_scene.instantiate()
-		var container = get_node("/root/Main")
-		container.add_child(circle_rain)
+	var pickup_scene
+	if pickup.obstacle_type == PickupBase.ObstacleType.CIRCLE_RAIN:
+		pickup_scene = circle_rain_scene
+	
+	var obstacle = pickup_scene.instantiate()
+	score += pickup.price + (obstacles.size() - 1) * pickup.price / 2
+	
+	var container = get_node("/root/Main")
+	container.add_child(obstacle)
 	
 	spawn_pickups()
 
 func game_over():
+	if score > high_score:
+		high_score = score
+	
 	reset()
 	get_tree().change_scene_to_file("res://scenes/main.tscn")
 	
 func reset():
 	obstacles.clear()
+	score = 0
 	
 func start_game():
 	spawn_pickups()
 	
 func spawn_pickups():
+	for pickup in current_pickups:
+		if pickup != null:
+			pickup.queue_free()
 	current_pickups.clear()
 	
 	for i in 2:

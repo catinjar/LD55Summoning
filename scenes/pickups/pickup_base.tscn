@@ -1,21 +1,23 @@
 [gd_scene load_steps=5 format=3 uid="uid://h0bohwcsagiy"]
 
-[ext_resource type="Script" path="res://scripts/pickup_base.gd" id="1_fnsdy"]
-[ext_resource type="Texture2D" uid="uid://crl3ttct6atej" path="res://art/circle.png" id="1_i4p7l"]
-[ext_resource type="PackedScene" uid="uid://c21sq33gmkjr" path="res://flocking_package/scenes/flock_effect.tscn" id="1_ttwh5"]
+[ext_resource type="Script" path="res://scripts/pickup_base.gd" id="1_8grqx"]
+[ext_resource type="Texture2D" uid="uid://crl3ttct6atej" path="res://art/circle.png" id="2_xh6jp"]
+[ext_resource type="PackedScene" uid="uid://c21sq33gmkjr" path="res://flocking_package/scenes/flock_effect.tscn" id="3_f24l5"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0rwxe"]
 radius = 18.1108
 
 [node name="PickupBase" type="Area2D"]
-script = ExtResource("1_fnsdy")
+script = ExtResource("1_8grqx")
+obstacle_type = null
+price = null
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 modulate = Color(0.894118, 0, 0, 1)
 scale = Vector2(0.320313, 0.320313)
-texture = ExtResource("1_i4p7l")
+texture = ExtResource("2_xh6jp")
 
-[node name="FlockEffect" parent="." instance=ExtResource("1_ttwh5")]
+[node name="FlockEffect" parent="." instance=ExtResource("3_f24l5")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_0rwxe")

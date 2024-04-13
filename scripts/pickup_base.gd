@@ -8,8 +8,9 @@ enum ObstacleType
 }
 
 @export var obstacle_type : ObstacleType
+@export var price : int = 100
 
 func _on_area_entered(area):
 	if area.is_in_group("player"):
-		GameCore.add_obstacle(obstacle_type)
+		GameCore.add_obstacle(self)
 		queue_free()
