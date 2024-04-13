@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://dipor1sxpqofi"]
+
+[ext_resource type="Script" path="res://scenes/obstacles/square.gd" id="1_7g0dm"]
+[ext_resource type="Texture2D" uid="uid://bf347cndn6ce5" path="res://art/square.png" id="1_xk50e"]
+[ext_resource type="PackedScene" uid="uid://c21sq33gmkjr" path="res://flocking_package/scenes/flock_effect.tscn" id="2_v5tvw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hot3e"]
+size = Vector2(224, 223)
+
+[node name="Square" type="RigidBody2D"]
+collision_layer = 2
+gravity_scale = 0.0
+max_contacts_reported = 10
+contact_monitor = true
+script = ExtResource("1_7g0dm")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.894118, 0.929412, 0, 1)
+scale = Vector2(1.80469, 1.80469)
+texture = ExtResource("1_xk50e")
+
+[node name="FlockEffect" parent="." instance=ExtResource("2_v5tvw")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-5, 0.5)
+shape = SubResource("RectangleShape2D_hot3e")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

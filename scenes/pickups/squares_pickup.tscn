@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://b41pm6x8wm5bi"]
+
+[ext_resource type="PackedScene" uid="uid://h0bohwcsagiy" path="res://scenes/pickups/pickup_base.tscn" id="1_ug3mj"]
+[ext_resource type="Texture2D" uid="uid://bf347cndn6ce5" path="res://art/square.png" id="2_fpos5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ywjio"]
+size = Vector2(39, 39)
+
+[node name="SquaresPickup" instance=ExtResource("1_ug3mj")]
+obstacle_type = 1
+
+[node name="Sprite2D" parent="." index="0"]
+modulate = Color(0.894118, 0.929412, 0, 1)
+texture = ExtResource("2_fpos5")
+
+[node name="CollisionShape2D" parent="." index="2"]
+position = Vector2(-0.5, 0.5)
+shape = SubResource("RectangleShape2D_ywjio")
