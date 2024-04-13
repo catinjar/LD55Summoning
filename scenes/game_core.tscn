@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://hcsxf167qh64"]
+
+[ext_resource type="Script" path="res://scenes/game_core.gd" id="1_gc4bm"]
+
+[node name="GameCore" type="Node2D"]
+script = ExtResource("1_gc4bm")

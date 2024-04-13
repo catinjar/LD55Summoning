@@ -1,14 +1,15 @@
 [gd_scene load_steps=5 format=3 uid="uid://h0bohwcsagiy"]
 
+[ext_resource type="Script" path="res://scripts/pickup_base.gd" id="1_fnsdy"]
 [ext_resource type="Texture2D" uid="uid://crl3ttct6atej" path="res://art/circle.png" id="1_i4p7l"]
-[ext_resource type="Script" path="res://scenes/pickup_base.gd" id="1_jquhu"]
 [ext_resource type="PackedScene" uid="uid://c21sq33gmkjr" path="res://flocking_package/scenes/flock_effect.tscn" id="1_ttwh5"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0rwxe"]
 radius = 18.1108
 
 [node name="PickupBase" type="Area2D"]
-script = ExtResource("1_jquhu")
+script = ExtResource("1_fnsdy")
+obstacle_type = null
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 modulate = Color(0.894118, 0, 0, 1)
