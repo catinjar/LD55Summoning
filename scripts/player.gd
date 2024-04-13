@@ -26,3 +26,6 @@ func update_movement(delta):
 	
 	position += velocity * delta
 	position = position.clamp(Vector2.ZERO, screen_size)
+
+func _on_body_entered(body):
+	GameCore.game_over()

@@ -1,14 +1,14 @@
 [gd_scene load_steps=5 format=3 uid="uid://d1jv1brtnqvxu"]
 
 [ext_resource type="Texture2D" uid="uid://crl3ttct6atej" path="res://art/circle.png" id="1_e72tl"]
-[ext_resource type="Script" path="res://scripts/player.gd" id="1_nkm33"]
+[ext_resource type="Script" path="res://scripts/player.gd" id="1_riir1"]
 [ext_resource type="PackedScene" uid="uid://c21sq33gmkjr" path="res://flocking_package/scenes/flock_effect.tscn" id="2_j57ek"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_00bra"]
 radius = 32.249
 
 [node name="Player" type="Area2D" groups=["player"]]
-script = ExtResource("1_nkm33")
+script = ExtResource("1_riir1")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.578125, 0.578125)
@@ -18,3 +18,5 @@ texture = ExtResource("1_e72tl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_00bra")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

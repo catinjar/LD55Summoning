@@ -9,7 +9,6 @@ radius = 18.1108
 
 [node name="PickupBase" type="Area2D"]
 script = ExtResource("1_fnsdy")
-obstacle_type = null
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 modulate = Color(0.894118, 0, 0, 1)

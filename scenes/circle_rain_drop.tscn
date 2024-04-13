@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://ct66wqxhib4sa"]
+
+[ext_resource type="Script" path="res://scenes/circle_rain_drop.gd" id="1_g7qkd"]
+[ext_resource type="Texture2D" uid="uid://crl3ttct6atej" path="res://art/circle.png" id="1_hx2hn"]
+[ext_resource type="PackedScene" uid="uid://c21sq33gmkjr" path="res://flocking_package/scenes/flock_effect.tscn" id="2_ailw8"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3prls"]
+radius = 59.6657
+
+[node name="CircleRainDrop" type="RigidBody2D"]
+script = ExtResource("1_g7qkd")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.894118, 0, 0, 1)
+texture = ExtResource("1_hx2hn")
+
+[node name="FlockEffect" parent="." instance=ExtResource("2_ailw8")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(1.00379, 1.02049)
+shape = SubResource("CircleShape2D_3prls")

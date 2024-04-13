@@ -1,12 +1,10 @@
 [gd_scene load_steps=3 format=3 uid="uid://bp44auxwnxhrw"]
 
+[ext_resource type="Script" path="res://scenes/main.gd" id="1_mgspf"]
 [ext_resource type="PackedScene" uid="uid://d1jv1brtnqvxu" path="res://scenes/player.tscn" id="1_y7og1"]
-[ext_resource type="PackedScene" uid="uid://h0bohwcsagiy" path="res://scenes/pickup_base.tscn" id="2_1hk27"]
 
 [node name="Main" type="Node"]
+script = ExtResource("1_mgspf")
 
 [node name="Player" parent="." instance=ExtResource("1_y7og1")]
 position = Vector2(916, 502)
-
-[node name="PickupBase" parent="." instance=ExtResource("2_1hk27")]
-position = Vector2(653, 314)
