@@ -8,7 +8,7 @@ enum ObstacleType
 	SQUARES = 1, # Just moving squares
 	BOUNCING_BALL = 2, # Ball falls with gravity and bounces
 	ROTATED_ROMBS = 3,
-	SCALING_BALLS = 4, # Balls that are scaling and moving in random directions
+	ROTATING_RECTANGLES = 4
 }
 
 @export var obstacle_type : ObstacleType

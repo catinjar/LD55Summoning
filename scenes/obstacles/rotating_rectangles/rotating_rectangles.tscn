@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://ds3slt3k2e500"]
+
+[ext_resource type="Script" path="res://scenes/obstacles/rotating_rectangles/rotating_rectangles.gd" id="1_mbcg3"]
+[ext_resource type="PackedScene" uid="uid://cvpempdori26h" path="res://scenes/obstacles/rotating_rectangles/rotating_rectangle.tscn" id="2_0is14"]
+
+[node name="RotatingRectangles" type="Node"]
+script = ExtResource("1_mbcg3")
+rectangle_scene = ExtResource("2_0is14")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 1.8
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

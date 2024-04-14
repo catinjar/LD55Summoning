@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://cvaeqm1encjlf"]
+
+[ext_resource type="PackedScene" uid="uid://h0bohwcsagiy" path="res://scenes/pickups/pickup_base.tscn" id="1_ejciv"]
+[ext_resource type="Texture2D" uid="uid://bf347cndn6ce5" path="res://art/square.png" id="2_mt0ay"]
+
+[node name="RotatingRectanglePickup" instance=ExtResource("1_ejciv")]
+obstacle_type = 4
+price = 400
+
+[node name="Sprite2D" parent="." index="0"]
+modulate = Color(0.894118, 0, 0.870588, 1)
+scale = Vector2(0.320313, 0.120313)
+texture = ExtResource("2_mt0ay")

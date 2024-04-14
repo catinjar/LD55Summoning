@@ -18,7 +18,7 @@ func _exit_tree():
 
 
 func create_flock(sprite):
-	sprite.hide()
+	#sprite.hide()
 	
 	var flock = Flock.new()
 	flock.set_owner(sprite)
