@@ -6,10 +6,9 @@ enum ObstacleType
 {
 	CIRCLE_RAIN = 0, # Balls dropping from above
 	SQUARES = 1, # Just moving squares
-	BOUNCING_TRIANGLES = 2, # Keeps bounding inside screen
-	BOUNCING_BALL = 3, # Ball falls with gravity and bounces
-	ROTATING_SQUARES = 4,
-	SCALING_BALLS = 5, # Balls that are scaling and moving in random directions
+	BOUNCING_BALL = 2, # Ball falls with gravity and bounces
+	ROTATING_TRIANGLES = 3,
+	SCALING_BALLS = 4, # Balls that are scaling and moving in random directions
 }
 
 @export var obstacle_type : ObstacleType

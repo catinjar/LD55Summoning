@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://b5largg8owtqm"]
+
+[ext_resource type="Script" path="res://scenes/obstacles/circle_rain/circle_rain.gd" id="1_hae4g"]
+[ext_resource type="PackedScene" uid="uid://ct66wqxhib4sa" path="res://scenes/obstacles/circle_rain/circle_rain_drop.tscn" id="2_rnhfq"]
+
+[node name="CircleRain" type="Node2D"]
+script = ExtResource("1_hae4g")
+circle_scene = ExtResource("2_rnhfq")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.2
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

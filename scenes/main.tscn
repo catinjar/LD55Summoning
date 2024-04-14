@@ -1,9 +1,21 @@
-[gd_scene load_steps=5 format=3 uid="uid://bp44auxwnxhrw"]
+[gd_scene load_steps=9 format=3 uid="uid://bp44auxwnxhrw"]
 
 [ext_resource type="Script" path="res://scenes/main.gd" id="1_mgspf"]
 [ext_resource type="PackedScene" uid="uid://d1jv1brtnqvxu" path="res://scenes/player.tscn" id="1_y7og1"]
 [ext_resource type="Script" path="res://scenes/ui.gd" id="2_4qha0"]
 [ext_resource type="PackedScene" uid="uid://c0nipx0yli60u" path="res://scenes/background.tscn" id="4_a2b7e"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_svyq2"]
+bounce = 1.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6uo4r"]
+size = Vector2(1928, 384)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_db6i3"]
+size = Vector2(362, 1201)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jokdj"]
+size = Vector2(334, 1210)
 
 [node name="Main" type="Node"]
 script = ExtResource("1_mgspf")
@@ -29,3 +41,32 @@ text = "10000"
 
 [node name="Player" parent="." instance=ExtResource("1_y7og1")]
 position = Vector2(916, 502)
+
+[node name="Floor" type="StaticBody2D" parent="."]
+collision_layer = 4
+collision_mask = 2
+physics_material_override = SubResource("PhysicsMaterial_svyq2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
+position = Vector2(962, 1269)
+shape = SubResource("RectangleShape2D_6uo4r")
+
+[node name="Floor2" type="StaticBody2D" parent="."]
+position = Vector2(-1320, -765)
+collision_layer = 4
+collision_mask = 2
+physics_material_override = SubResource("PhysicsMaterial_svyq2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2"]
+position = Vector2(1133, 1370.5)
+shape = SubResource("RectangleShape2D_db6i3")
+
+[node name="Floor3" type="StaticBody2D" parent="."]
+position = Vector2(1229, -649)
+collision_layer = 4
+collision_mask = 2
+physics_material_override = SubResource("PhysicsMaterial_svyq2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor3"]
+position = Vector2(864, 1257)
+shape = SubResource("RectangleShape2D_jokdj")

@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://c8u0e3kfp553h"]
 
-[ext_resource type="Script" path="res://scenes/obstacles/squares.gd" id="1_8gs7f"]
-[ext_resource type="PackedScene" uid="uid://dipor1sxpqofi" path="res://scenes/obstacles/square.tscn" id="2_u834p"]
+[ext_resource type="Script" path="res://scenes/obstacles/squares/squares.gd" id="1_8gs7f"]
+[ext_resource type="PackedScene" uid="uid://dipor1sxpqofi" path="res://scenes/obstacles/squares/square.tscn" id="2_u834p"]
 
 [node name="Squares" type="Node"]
 script = ExtResource("1_8gs7f")

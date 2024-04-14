@@ -2,6 +2,7 @@ extends Node2D
 
 @export var circle_rain_scene : PackedScene
 @export var squares_scene : PackedScene
+@export var bouncing_ball_scene : PackedScene
 @export var pickup_scenes : Array[PackedScene]
 
 var obstacles = []
@@ -18,6 +19,8 @@ func add_obstacle(pickup):
 		pickup_scene = circle_rain_scene
 	elif pickup.obstacle_type == PickupBase.ObstacleType.SQUARES:
 		pickup_scene = squares_scene
+	elif pickup.obstacle_type == PickupBase.ObstacleType.BOUNCING_BALL:
+		pickup_scene = bouncing_ball_scene
 	
 	var obstacle = pickup_scene.instantiate()
 	score += pickup.price + (obstacles.size() - 1) * pickup.price / 2

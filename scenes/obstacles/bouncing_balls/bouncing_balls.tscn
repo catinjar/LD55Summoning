@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://dyw5dv4bydxl"]
+
+[ext_resource type="Script" path="res://scenes/obstacles/bouncing_balls/bouncing_balls.gd" id="1_n8yyr"]
+[ext_resource type="PackedScene" uid="uid://dm7ses0mspvq1" path="res://scenes/obstacles/bouncing_balls/bouncing_ball.tscn" id="2_vamhj"]
+
+[node name="BouncingBalls" type="Node"]
+script = ExtResource("1_n8yyr")
+bouncing_ball_scene = ExtResource("2_vamhj")

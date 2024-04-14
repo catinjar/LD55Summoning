@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://cg3esik2irxvb"]
+
+[ext_resource type="PackedScene" uid="uid://h0bohwcsagiy" path="res://scenes/pickups/pickup_base.tscn" id="1_ks3sq"]
+
+[node name="BouncingBallPickup" instance=ExtResource("1_ks3sq")]
+obstacle_type = 2
+
+[node name="Sprite2D" parent="." index="0"]
+modulate = Color(0.894118, 0.407843, 0, 1)
