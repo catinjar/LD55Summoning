@@ -119,7 +119,7 @@ void main() {
 
     vec2 wind = vec2(-force.y, force.x);
     wind = normalize(wind);
-    wind *= sin(rand_from_seed(alt_seed1) * 300 + length(current_position) / 50) * min(length(velocity) * length(velocity) * 0.2, 300 * 15);
+    wind *= sin(rand_from_seed(alt_seed1) * 200 + length(current_position) / 100) * min(length(velocity) * length(velocity) * 0.2, 200 * 15);
 
     velocity += force * params.delta;
     velocity += wind * params.delta;
