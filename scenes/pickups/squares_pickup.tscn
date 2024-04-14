@@ -8,6 +8,7 @@ size = Vector2(39, 39)
 
 [node name="SquaresPickup" instance=ExtResource("1_ug3mj")]
 obstacle_type = 1
+price = 200
 
 [node name="Sprite2D" parent="." index="0"]
 modulate = Color(0.894118, 0.929412, 0, 1)

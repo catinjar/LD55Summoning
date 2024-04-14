@@ -8,5 +8,5 @@ func _ready():
 
 func spawn_bouncing_ball():
 	var bouncing_ball = bouncing_ball_scene.instantiate()
-	bouncing_ball.global_position = Vector2(randf_range(0, 1920), -100)
+	bouncing_ball.global_position = Vector2(randf_range(0, 1920), -300)
 	add_child(bouncing_ball)

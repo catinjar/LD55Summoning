@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://hcsxf167qh64"]
+[gd_scene load_steps=10 format=3 uid="uid://hcsxf167qh64"]
 
 [ext_resource type="Script" path="res://scenes/game_core.gd" id="1_gc4bm"]
 [ext_resource type="PackedScene" uid="uid://b5largg8owtqm" path="res://scenes/obstacles/circle_rain/circle_rain.tscn" id="2_2v15i"]
@@ -6,11 +6,14 @@
 [ext_resource type="PackedScene" uid="uid://c8u0e3kfp553h" path="res://scenes/obstacles/squares/squares.tscn" id="3_pj1em"]
 [ext_resource type="PackedScene" uid="uid://dyw5dv4bydxl" path="res://scenes/obstacles/bouncing_balls/bouncing_balls.tscn" id="4_u2ls2"]
 [ext_resource type="PackedScene" uid="uid://b41pm6x8wm5bi" path="res://scenes/pickups/squares_pickup.tscn" id="4_yit46"]
+[ext_resource type="PackedScene" uid="uid://detvui6e147wl" path="res://scenes/obstacles/rotated_rombs/rotated_rombs.tscn" id="5_lxt34"]
 [ext_resource type="PackedScene" uid="uid://cg3esik2irxvb" path="res://scenes/pickups/bouncing_ball_pickup.tscn" id="6_pmynm"]
+[ext_resource type="PackedScene" uid="uid://ck0qtkm45qdww" path="res://scenes/pickups/romb_pickup.tscn" id="8_5ab3q"]
 
 [node name="GameCore" type="Node2D"]
 script = ExtResource("1_gc4bm")
 circle_rain_scene = ExtResource("2_2v15i")
 squares_scene = ExtResource("3_pj1em")
 bouncing_ball_scene = ExtResource("4_u2ls2")
-pickup_scenes = Array[PackedScene]([ExtResource("3_jjggu"), ExtResource("4_yit46"), ExtResource("6_pmynm")])
+rotated_rombs_scene = ExtResource("5_lxt34")
+pickup_scenes = Array[PackedScene]([ExtResource("3_jjggu"), ExtResource("4_yit46"), ExtResource("6_pmynm"), ExtResource("8_5ab3q")])
